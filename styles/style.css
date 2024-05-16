@@ -1,1 +1,69 @@
-/* место для вашего кода */
+.header{
+  width: 100%;
+  height: 293px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 24px;
+ }
+
+.header__navigation{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 13px;
+  margin-left: 26px;
+  list-style-type: circle;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.menu__item{
+  font-size: 18px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+/* одним стилем убираем точку на активном элементе и убираем подчёркивание активного элемента от <a><a/> */
+
+.active{
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.menu__item .active{
+  margin-right: 2px;
+}
+
+.header__logo{
+  width: 148px;
+  margin: 0 185px 0 41px;
+}
+
+.contacts{
+  list-style-type: none;
+  margin-right: 25px;
+}
+
+.contacts__item{
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts__phone{
+  text-decoration: underline;
+}
+
+.contacts__address{
+  font-style: normal;
+}
+
+.jumbotron{
+  background-image: url('/images/cover.jpg');
+  background-size: cover;
+  height: 757px;
+}
+.jumbotron:before{
+
+}

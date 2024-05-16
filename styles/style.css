@@ -1,1 +1,87 @@
-/* место для вашего кода */
+.header{
+  width: 100%;
+  height: 293px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 24px;
+ }
+
+.header__navigation{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+  margin-left: 26px;
+  padding: 0;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+.menu__item{
+  font-size: 18px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.menu__link{
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+/* т.к. в макете отступ от маркера 7 пикселей - отдельно настраиваем маркер */
+
+.menu__item__marker{
+  position: relative;
+  left: -7px;
+}
+
+/* т.к. у активного элемента меню нет подчёркивания и маркера - для него особый подход */
+
+.active{
+  list-style-type: none;
+  border-bottom: none;
+}
+
+.menu__item.active{
+  padding-right: 7px;
+}
+
+.header__logo{
+  width: 148px;
+  margin: 0 191px 0 37px;
+}
+
+.contacts{
+  list-style-type: none;
+}
+
+.contacts__item{
+  color: #000;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts__phone{
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+.contacts__email{
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+.contacts__address{
+  font-style: normal;
+}
+
+.jumbotron{
+  background-image: url('/images/cover.jpg');
+  background-size: cover;
+  height: 757px;
+  width: 100%;
+}
+.jumbotron:before{
+
+}

@@ -1,21 +1,20 @@
 .header{
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   width: 100%;
   height: 293px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-around;
-  margin: 0 24px;
  }
 
 .header__navigation{
   display: flex;
   flex-flow: row nowrap;
-  gap: 8px;
-  margin-left: 26px;
+  margin-left: 50px;
   padding: 0;
-  list-style-type: circle;
   list-style-position: inside;
+  list-style-type: circle;
+  gap: 8px;
 }
 
 .menu__item{
@@ -48,11 +47,21 @@
 }
 
 .header__logo{
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  text-align: center;
+}
+
+.logo__image {
   width: 148px;
-  margin: 0 191px 0 37px;
+  height: 105px;
+  margin: auto;
 }
 
 .contacts{
+  width: 240px;
+  margin-right: 50px;
   list-style-type: none;
 }
 
@@ -77,11 +86,88 @@
 }
 
 .jumbotron{
-  background-image: url('/images/cover.jpg');
-  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
   height: 757px;
-  width: 100%;
-}
-.jumbotron:before{
 
+  /* затемнение фона */
+
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  url('/images/cover.jpg') center center no-repeat;
+
+  /* т.к. у нас кроп с изображения - просто увеличиваем его */
+
+  background-size: 127.5% auto;
+}
+
+.jumbotron__title {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 165px 50px 0;
+  row-gap: 20px;
+}
+
+.jumbotron__title-row {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.first-row {
+  line-height: 115px;
+  align-self: start;
+}
+
+.second-row {
+  align-self: center;
+}
+
+.third-row {
+  align-self: end;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 60px;
+}
+
+.no-spacing {
+  letter-spacing: 0;
+}
+
+.jumbotron__footer {
+  display: flex;
+  align-items: end;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 135px 50px 0;
+}
+
+.subline {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 62px;
+  margin-left: 32px;
+  word-spacing: 18px;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.jumbotron__footer__make-bet-button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 51px;
+  padding: 14px 32px;
+  text-transform: uppercase;
+  color: #FFF;
+  border: 1px #FFF solid;
+  background-color: transparent;
 }

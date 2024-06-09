@@ -1,16 +1,13 @@
 .header{
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr;
   align-items: center;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  width: 100%;
-  height: 293px;
+  padding: 92px 51px 89px;
  }
 
 .header__navigation{
   display: flex;
   flex-flow: row nowrap;
-  margin-left: 50px;
   padding: 0;
   list-style-position: inside;
   list-style-type: circle;
@@ -47,21 +44,33 @@
 }
 
 .header__logo{
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  text-align: center;
+  display: block;
+  justify-self: center;
+  align-self: center;
+  width: 140px;
+}
+
+/* на разрешениях выше ~1300px по горизонтали - логотип чувствует себя хорошо и паркуется по центру
+   Добавил медиа запрос чтобы центрировать его по центру на целевом разрешении и не применять
+   position: absolute для центрирования лого в хедере
+*/
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+  .header__logo{
+    margin-right: 140px;
+  }
 }
 
 .logo__image {
-  width: 148px;
-  height: 105px;
-  margin: auto;
+  width: 100%;
+}
+
+.header .contacts{
+  justify-self: end;
 }
 
 .contacts{
   width: 240px;
-  margin-right: 50px;
   list-style-type: none;
 }
 
@@ -89,7 +98,6 @@
   display: flex;
   flex-flow: column nowrap;
   height: 757px;
-
   /* затемнение фона */
 
   background: linear-gradient(
@@ -98,7 +106,7 @@
   ),
   url('/images/cover.jpg') center center no-repeat;
 
-  /* т.к. у нас кроп с изображения - просто увеличиваем его */
+  /* т.к. у нас кроп с изображения - просто увеличиваем его т.к. cover не сходится с макетом */
 
   background-size: 127.5% auto;
 }
@@ -170,4 +178,83 @@
   color: #FFF;
   border: 1px #FFF solid;
   background-color: transparent;
+}
+
+.lots{
+  margin: 180px 24px 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.lots__heading{
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+.card-container{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 25px;
+  justify-content: space-between;
+  margin: 27px 0 30px;
+}
+
+.lot-card{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 334px;
+  height: 563px;
+  color: #FFF;
+}
+
+.card__title{
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 48px 40px 0;
+}
+
+.card__description{
+  margin: 0 40px 48px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* используем тот же подход, что и выше, но скачал 2 изображения лота отдельно, т.к. по умолчанию не подходило */
+
+.movie-lot{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  url('/images/card-lot-01.jpeg') center center/ cover no-repeat;
+}
+
+.book-lot{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  url('/images/card-lot-02.png') center center/ cover no-repeat;
+}
+
+.image-lot{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
+  ),
+  url('/images/card-lot-03.jpg') center center/ cover no-repeat;
+}
+
+.more-lots{
+  margin: 0 0 0 40px;
+  font-weight: 400;
+  font-size: 20px;
 }

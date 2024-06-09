@@ -1,11 +1,11 @@
-.header{
+.header {
   display: grid;
-  grid-template-columns: 3fr 4fr 3fr;
   align-items: center;
   padding: 92px 51px 89px;
- }
+  grid-template-columns: 3fr 4fr 3fr;
+}
 
-.header__navigation{
+.header__navigation {
   display: flex;
   flex-flow: row nowrap;
   padding: 0;
@@ -14,41 +14,41 @@
   gap: 8px;
 }
 
-.menu__item{
+.menu__item {
   font-size: 18px;
   line-height: 24px;
   white-space: nowrap;
 }
 
-.menu__link{
+.menu__link {
   text-decoration: none;
   border-bottom: 1px solid #000;
 }
 
 /* т.к. в макете отступ от маркера 7 пикселей - отдельно настраиваем маркер */
 
-.menu__item__marker{
+.menu__item__marker {
   position: relative;
   left: -7px;
 }
 
 /* т.к. у активного элемента меню нет подчёркивания и маркера - для него особый подход */
 
-.active{
+.active {
   list-style-type: none;
-  border-bottom: none;
   text-decoration: none;
+  border-bottom: none;
 }
 
-.menu__item.active{
+.menu__item.active {
   padding-right: 7px;
 }
 
-.header__logo{
+.header__logo {
   display: block;
-  justify-self: center;
   align-self: center;
   width: 140px;
+  justify-self: center;
 }
 
 /* на разрешениях выше ~1300px по горизонтали - логотип чувствует себя хорошо и паркуется по центру
@@ -57,7 +57,7 @@
 */
 
 @media (min-width: 1100px) and (max-width: 1300px) {
-  .header__logo{
+  .header__logo {
     margin-right: 140px;
   }
 }
@@ -66,36 +66,36 @@
   width: 100%;
 }
 
-.header .contacts{
+.header .contacts {
   justify-self: end;
 }
 
-.contacts{
+.contacts {
   width: 240px;
   list-style-type: none;
 }
 
-.contacts__item{
-  color: #000;
+.contacts__item {
   font-size: 18px;
   line-height: 24px;
+  color: #000;
 }
 
-.contacts__phone{
+.contacts__phone {
   text-decoration: none;
   border-bottom: 1px solid #000;
 }
 
-.contacts__email{
+.contacts__email {
   text-decoration: none;
   border-bottom: 1px solid #000;
 }
 
-.contacts__address{
+.contacts__address {
   font-style: normal;
 }
 
-.jumbotron{
+.jumbotron {
   display: flex;
   flex-flow: column nowrap;
   height: 757px;
@@ -181,29 +181,29 @@
   background-color: transparent;
 }
 
-.lots{
-  margin: 180px 24px 0;
+.lots {
   display: flex;
   flex-flow: column nowrap;
+  margin: 180px 24px 0;
 }
 
-.lots__heading{
-  font-weight: 700;
+.lots__heading {
   font-size: 40px;
+  font-weight: 700;
   line-height: 1.17;
-  text-transform: uppercase;
   margin-left: 40px;
+  text-transform: uppercase;
 }
 
-.card-container{
+.card-container {
   display: flex;
   flex-flow: row nowrap;
-  gap: 25px;
   justify-content: space-between;
   margin: 27px 0 30px;
+  gap: 25px;
 }
 
-.lot-card{
+.lot-card {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -212,25 +212,25 @@
   color: #FFF;
 }
 
-.card__title{
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-weight: 700;
+.card__title {
   font-size: 22px;
+  font-weight: 700;
   line-height: 1.2;
   margin: 48px 40px 0;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
-.card__description{
-  margin: 0 40px 48px;
-  font-weight: 400;
+.card__description {
   font-size: 20px;
+  font-weight: 400;
   line-height: 1.2;
+  margin: 0 40px 48px;
 }
 
 /* используем тот же подход, что и выше, но скачал 2 изображения лота отдельно, т.к. по умолчанию не подходило */
 
-.movie-lot{
+.movie-lot {
   background: linear-gradient(
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.6)
@@ -238,7 +238,7 @@
   url('/images/card-lot-01.jpeg') center center/ cover no-repeat;
 }
 
-.book-lot{
+.book-lot {
   background: linear-gradient(
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.6)
@@ -246,7 +246,7 @@
   url('/images/card-lot-02.png') center center/ cover no-repeat;
 }
 
-.image-lot{
+.image-lot {
   background: linear-gradient(
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.6)
@@ -254,10 +254,10 @@
   url('/images/card-lot-03.jpg') center center/ cover no-repeat;
 }
 
-.more-lots{
-  margin: 0 0 0 40px;
-  font-weight: 400;
+.more-lots {
   font-size: 20px;
+  font-weight: 400;
+  margin: 0 0 0 40px;
 }
 
 .about {
@@ -286,7 +286,6 @@
 
 .about__description {
   margin-top: 133px;
-
 }
 
 .about__title {
@@ -303,40 +302,38 @@
   margin-top: 26px;
 }
 
-.footer__block{
+.footer__block {
   display: flex;
   flex-flow: row nowrap;
-  padding: 0 50px 85px;
   justify-content: space-between;
+  padding: 0 50px 85px;
 }
 
-.footer__menu{
+.footer__menu {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0px;
+  margin: -3px 0 0 0;
+  padding: 0;
   list-style-type: none;
   text-align: center;
   white-space: nowrap;
-  margin: -3px 0 0 0;
-  padding: 0;
-
 }
 
-.footer__menu-item__link{
+.footer__menu-item__link {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.17;
   text-underline-position: under;
 }
 
-.footer__socials__container{
+.footer__socials__container {
   display: flex;
   flex-flow: row nowrap;
-  gap: 48px;
   list-style-type: none;
+  gap: 48px;
 }
 
-.social__logo{
+.social__logo {
   width: 48px;
   height: 48px;
 }

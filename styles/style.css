@@ -86,8 +86,12 @@
   display: flex;
   flex-flow: column nowrap;
   min-height: 757px;
+  /*
+    для меня пока загадка почему у вас с абсолютным путём не отображаются изображения
+    попробую относительный
+   */
   background:
-  url('/images/cover.jpg') center center no-repeat;
+  url('../images/cover.jpg') center center no-repeat;
 
   /* т.к. у нас кроп с изображения - просто увеличиваем его т.к. cover не сходится с макетом */
 
@@ -126,7 +130,7 @@
   Z-index: 1;
 }
 
-.first-row {
+.left-side {
   align-self: start;
 }
 
@@ -134,11 +138,11 @@
   line-height: 115px;
 }
 
-.second-row {
+.mid-side {
   align-self: center;
 }
 
-.third-row {
+.right-side {
   align-self: end;
 }
 
@@ -212,6 +216,10 @@
   list-style: none;
 }
 
+.lot-url{
+  text-decoration: none;
+}
+
 .lot-card {
   position: relative;
   display: flex;
@@ -242,15 +250,15 @@
 }
 
 .movie-lot {
-  background: url('/images/card-lot-01.jpeg') center center/ cover no-repeat;
+  background: url('../images/card-lot-01.jpeg') center center/ cover no-repeat;
 }
 
 .book-lot {
-  background: url('/images/card-lot-02.png') center center/ cover no-repeat;
+  background: url('../images/card-lot-02.png') center center/ cover no-repeat;
 }
 
 .image-lot {
-  background: url('/images/card-lot-03.jpg') center center/ cover no-repeat;
+  background: url('../images/card-lot-03.jpg') center center/ cover no-repeat;
 }
 
 .more-lots {

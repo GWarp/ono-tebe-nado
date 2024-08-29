@@ -4,9 +4,9 @@
   <meta charset="UTF-8"/>
   <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="./fonts/fonts.css" rel="stylesheet">
   <link href="./styles/global.css" rel="stylesheet">
   <link href="./styles/style.css" rel="stylesheet">
-  <link href="./fonts/fonts.css" rel="stylesheet">
   <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
     </menu>
   </nav>
   <div class="header__logo">
-    <a href="#"><img alt="логотип" class="logo__image" src="/images/logo-black.svg"></a>
+    <a href="#"><img alt="логотип" class="logo__image" src="./images/logo-black.svg"></a>
   </div>
   <address class="contacts">
     <ul class="contacts__list">
@@ -59,18 +59,25 @@
     <div class="jumbotron">
       <div class="cover"></div>
       <div class="jumbotron__title">
-        <h1 class="jumbotron__title-row first-row">
-          <span class="bigger-text">о<span class="letter-spacing-extended">но</span></span>
-        </h1>
-        <span class="jumbotron__title-row second-row">
-          те<span class="letter-spacing-extended">бе</span>
+        <span class="left-side">
+          <h1 class="jumbotron__title-row">
+            <span class="bigger-text">о<span class="letter-spacing-extended">но</span></span>
+          </h1>
         </span>
-        <h2 class="jumbotron__title-row third-row">
-          <span class="letter-spacing-extended">н</span>ад<span class="no-spacing">о</span></h2>
+        <span class="mid-side">
+          <h2 class="jumbotron__title-row">
+            те<span class="letter-spacing-extended">бе</span>
+          </h2>
+        </span>
+        <span class="right-side">
+          <h3 class="jumbotron__title-row">
+            <span class="letter-spacing-extended">н</span>ад<span class="no-spacing">о</span>
+          </h3>
+        </span>
       </div>
       <div class="jumbotron__footer">
         <p class="subline">Аукцион вещей, в которые никто не верил</p>
-        <button class="jumbotron__footer__make-bet-button" type="submit">сделать ставку</button>
+        <button class="jumbotron__footer__make-bet-button" type="button">сделать ставку</button>
       </div>
     </div>
   </section>
@@ -79,7 +86,7 @@
     <h2 class="lots__heading">Лоты</h2>
     <ul class="card-container">
       <li class="card-listing">
-        <a href="#">
+        <a class="lot-url" href="#">
           <article class="lot-card movie-lot">
             <div class="cover"></div>
             <h3 class="card__title">
@@ -94,7 +101,7 @@
         </a>
       </li>
       <li class="card-listing">
-        <a href="#">
+        <a class="lot-url" href="#">
           <article class="lot-card book-lot">
             <div class="cover"></div>
             <h3 class="card__title">
@@ -110,7 +117,7 @@
         </a>
       </li>
       <li class="card-listing">
-        <a href="#">
+        <a class="lot-url" href="#">
           <article class="lot-card image-lot">
             <div class="cover"></div>
             <h3 class="card__title">

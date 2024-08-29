@@ -120,7 +120,11 @@
   Z-index: 1;
 }
 
-.jumbotron__title-row {
+.jumbotron__title-text {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 20px;
+  width: 100%;
   font-size: 100px;
   font-weight: 700;
   line-height: 100px;
